@@ -1,14 +1,10 @@
 // src/router.js
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from './views/Home.vue'; 
-import CreditCheck from './views/CreditCheck.vue'; // Adjust this import too
+import CreditCheck from './CreditCheck.vue'; // Adjust this import too
 
 const routes = [
-    {
-        path: '/credit-check',
-        name: 'CreditCheck',
-        component: CreditCheck, // The component to load for this route
-    },
+    {path: '/creditCheck', component: CreditCheck }
+    
     // Add more routes as needed
 ];
 
