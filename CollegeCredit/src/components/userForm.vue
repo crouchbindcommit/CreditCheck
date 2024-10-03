@@ -1,13 +1,14 @@
 <template>
 
     <!-- Log In if no Suspicious Activtiy is suspected-->
+   <v-card>
+    <v-card-title>Log In</v-card-title>
     <template v-if="suspicousActivity == false">
         <v-text-field
             v-model="username"
             :counter="12"
             :rules="userRules"
             label="username"
-            hide-details
             required
         >
         </v-text-field>
@@ -16,12 +17,12 @@
             :counter="15"
             :rules="securePass"
             label="password"
-            hide-details
             required
         >
         </v-text-field>
 
     </template>
+   </v-card>
 
 </template>
 
@@ -38,6 +39,7 @@ const userRules = computed( () => {
 
     if (username.value == '') rules.push('Username is required.');
     if (username.value.length > 12) rules.push('Username must be less than 12 characters.');
+    if(username.value.includes(' ' || '\t' || '\n'))rules.push('Username contains invalid character.')
     return rules;
 }
 )
@@ -47,8 +49,7 @@ const securePass = computed( () => {
 
     if (password.value == '') rules.push('Password is required.');
     if (password.value.length != 15) rules.push('password must be 15 characters.');
-    if (!password.value.includes( '/\d\/')) rules.push('Password must contain a number.')
-    if (!password.value.includes('/[a-zA-Z]')) rules.push('Password must contain a letter.')
+    if(password.value.includes(' ' || '\t' || '\n'))rules.push('Password contains invalid character.')
     return rules;
 }
 )
