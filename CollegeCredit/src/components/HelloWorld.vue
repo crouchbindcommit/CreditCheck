@@ -1,19 +1,24 @@
 <template>
-  <v-container class="fill-height">
+  <v-container class="pt-4 full-page-background" style="background-color: white;">
+  <v-app-bar app color="white" flat>
+      <v-spacer></v-spacer>
+      <v-btn icon>
+        <v-icon>mdi-help-circle</v-icon> <!-- Question mark icon -->
+      </v-btn>
+      <v-btn icon>
+        <v-icon>mdi-account</v-icon>
+      </v-btn>
+    </v-app-bar>
+
     <v-responsive
       class="align-centerfill-height mx-auto"
       max-width="900"
     >
-      <v-img
-        class="mb-4"
-        height="150"
-        src="@/assets/logo.png"
-      />
-
+    
+      <
       <div class="text-center">
-        <div class="text-body-2 font-weight-light mb-n1">Welcome to</div>
-
-        <h1 class="text-h2 font-weight-bold">Vuetify</h1>
+        <h1 class="text-h3 font-weight-medium black custom-title">Common Credit App</h1>
+        <div class="text-body-2 font-weight-light mb-n1 custom-subtitle pt-5">The Credit Score Calculator for Students</div>
       </div>
 
       <div class="py-4" />
@@ -155,3 +160,30 @@
 <script setup lang="ts">
   //
 </script>
+
+<style scoped>
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.full-page-background {
+  min-height: 100vh; /* Ensure the container fills the full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.custom-title {
+  color: #002d72; /* Replace with your desired color */
+}
+
+.custom-subtitle {
+  color: #002d72; /* Replace with your desired color */
+}
+
+.v-app-bar {
+  border: none !important; /* Remove any border */
+  box-shadow: none !important; /* Remove shadow if present */
+}
+
+</style>
