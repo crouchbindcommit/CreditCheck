@@ -1,5 +1,5 @@
 <template>
-  <v-footer height="40" class="white-background"app>
+  <v-footer height="40" class="white-background" app>
     <a
       v-for="item in items"
       :key="item.title"
@@ -19,7 +19,7 @@
       class="text-caption text-disabled "
       style="position: absolute; right: 16px;"
     >
-      &copy; 2016-{{ (new Date()).getFullYear() }} <span class="d-none d-sm-inline-block">Vuetify, LLC</span>
+      &copy; {{ (new Date()).getFullYear() }} <span class="d-none d-sm-inline-block">Common Credit App, LLC</span>
       —
       <a
         class="text-decoration-none on-surface "
@@ -77,7 +77,7 @@
     &:hover
       color: rgba(25, 118, 210, 1)
 
-  
-    
+  .white-background
+    background-color: #051B35
 
 </style>
