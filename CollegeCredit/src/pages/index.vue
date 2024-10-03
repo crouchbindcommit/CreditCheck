@@ -1,5 +1,6 @@
 <template>
-  <LandingPage />
+
+  <loginCreation />
 </template>
 
 <script lang="ts" setup>

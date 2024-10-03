@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@mdi/font": "7.4.47",
+    "@mdi/js": "^7.4.47",
+    "@vuepic/vue-datepicker": "^9.0.3",
     "chart.js": "^4.4.4",
     "core-js": "^3.37.1",
     "roboto-fontface": "*",
@@ -38,7 +40,7 @@
     "vite": "^5.3.3",
     "vite-plugin-vue-layouts": "^0.11.0",
     "vite-plugin-vuetify": "^2.0.3",
-    "vue-router": "^4.4.0",
+    "vue-router": "^4.4.5",
     "vue-tsc": "^2.0.26"
   }
 }
