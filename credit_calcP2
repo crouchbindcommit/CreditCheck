@@ -1,0 +1,30 @@
+import mysql.connector
+from datetime import datetime
+
+# Connect to the database to retrieve payment history
+connection = mysql.connector.connect(
+    host='localhost',
+    user='root',
+    password='your_password',
+    database='common_credit_app',
+    auth_plugin='caching_sha2_password'
+)
+cursor = connection.cursor()
+
+# SQL query to get data from the 'students' table
+cursor.execute("SELECT * FROM students")
+
+# Fetch all rows from the query result
+results = cursor.fetchall()
+
+# Print the results
+for row in results:
+    print(row)
+
+# Close the cursor and connection
+
+
+
+
+cursor.close()
+connection.close()
