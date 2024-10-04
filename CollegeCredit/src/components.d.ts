@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AppFooter: typeof import('./components/AppFooter.vue')['default']
+    Dashboard: typeof import('./components/Dashboard.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     LandingPage: typeof import('./components/LandingPage.vue')['default']
     LoginCreation: typeof import('./components/loginCreation.vue')['default']
