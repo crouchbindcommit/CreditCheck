@@ -22,7 +22,7 @@
       <v-btn icon @Click="goTo('/account')">
         <v-icon>mdi-account</v-icon>
       </v-btn>
-      <v-btn icon>
+      <v-btn icon @Click="goTo('/signOut')">
         <v-icon>mdi-logout</v-icon>
       </v-btn>
     </v-app-bar>
@@ -57,7 +57,7 @@ export default {
   data() {
     return {
       items: [
-        { title: 'Score & Report', link: '/report', icon: 'mdi-file-document' },
+        { title: 'Score & Report', link: '/report_blank', icon: 'mdi-file-document' },
         { title: 'Credit Summary', link: '/summary', icon: 'mdi-file-chart' },
         { title: 'Score History', link: '/history', icon: 'mdi-history' },
         { title: 'Where You Stand', link: '/stand', icon: 'mdi-map' },
@@ -71,6 +71,11 @@ export default {
     goTo(link) {
       this.$router.push(link); // Navigate to the selected route
     },
+   openReportInNewTab() {
+    const reportUrl = router.resolve({ path: '/report' }).href; // Get the full URL for the report route
+    window.open(reportUrl, '_blank'); // Open in a new tab
+  },
+
     refreshScore() {
       // Logic to refresh the score
       console.log('Score refreshed');

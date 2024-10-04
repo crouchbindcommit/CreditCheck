@@ -74,6 +74,6 @@ const Password = ref('');
 const router = useRouter();
 
 function goToCreditCheck(){
-    router.push({ name: 'CreditCheck' }); 
+    router.push('/creditCheck'); 
 }
 </script>

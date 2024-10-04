@@ -1,5 +1,7 @@
 <template>
-    hello
+    <Dashboard />
 </template>
 
-<script setup lang="js"></script>
+<script setup lang="js">
+
+</script>
