@@ -39,7 +39,7 @@
                 <div style="display: flex; flex-direction: column; align-items: center;">
                     <span class="font-weight-medium" style="font-size: 12px; color: black;">YOUR CREDIT SCORE</span>
                     <h1 style="padding-top:0px; margin-top:0px; font-size: 70px; color: #16202A;">{{ cibilScore }}</h1>
-                    <v-btn @click="refreshScore" color="#10253D" class="mt-2">See Why</v-btn>
+                    <v-btn @click="goTo('/report')" color="#10253D" class="mt-2">See Why</v-btn>
                     </div>
                 </v-card-title>
                 <v-card-text>
@@ -57,10 +57,10 @@ export default {
   data() {
     return {
       items: [
-        { title: 'Score & Report', link: '/report_blank', icon: 'mdi-file-document' },
+        { title: 'Score & Report', link: '/report', icon: 'mdi-file-document' },
         { title: 'Credit Summary', link: '/summary', icon: 'mdi-file-chart' },
         { title: 'Score History', link: '/history', icon: 'mdi-history' },
-        { title: 'Where You Stand', link: '/stand', icon: 'mdi-map' },
+        { title: 'Where You Stand', link: 'https://www.debt.org/students/credit-scores/', icon: 'mdi-map' },
       ],
       cibilScore: 681,
       lastUpdated: '29th May \'23',
